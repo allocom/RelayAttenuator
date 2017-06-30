@@ -29,11 +29,11 @@ int main(int argc, char *argv[])
 {
 	struct sockaddr_un  serv_addr;
 	int sockfd, servlen;
-	int opt;
+	unsigned int opt;
 	char buffer[82];
 	char *cmd;
 
-	while ((opt = (argc, argv, "hc:", NULL, NULL)) != -1)
+	while ((opt = getopt_long(argc, argv, "hc:", NULL, NULL)) != -1)
 	{
 		switch (opt) {
 		case 'c':

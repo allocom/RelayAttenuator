@@ -63,7 +63,7 @@ static const struct option options[] = {
 };
 
 #define INT_GPIO 	5
-//#define PACKET_SIZE 	256
+#define PACKET_SIZE 	256
 #define TIMEOUT 	3 /* three seconds */
 #define DEFAULT_VOL	0x1f
 #define IRCTL_FILE	"/etc/r_attenu.conf"
