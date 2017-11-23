@@ -315,10 +315,10 @@ static int ra_read(int fd)
 
 static void ra_write(int fd, unsigned short data)
 {
-	if((data == 0xffe0) || (data == 0xffdf) || (data == 0xffd0) || (data == 0xffcf))
+	//if((data == 0xffe0) || (data == 0xffdf) || (data == 0xffd0) || (data == 0xffcf))
 	{
 		wiringPiI2CWrite(fd, 0x3f); // Bug fix: to avoid noise
-		usleep(500);
+		usleep(600);
 	}
 	if (wiringPiI2CWrite(fd, data) < 0)
 		fputs("Error: Writing on I2C\n", stderr);
